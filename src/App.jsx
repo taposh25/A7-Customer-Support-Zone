@@ -1,27 +1,60 @@
-
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import Banner from './components/Banner/Banner'
+import Tickets from './components/Tickets/Tickets'
+import TaskStatus from './components/TaskStatus/TaskStatus'
+import Footer from './components/Footer/Footer'
+import { Suspense, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// fetch tickets json
+const fetchTickets = async () => {
+  const res = await fetch('/tickets.json')  // src/Tickets.json
+  if(!res.ok) throw new Error('Failed to fetch tickets')
+  return res.json()
+}
+
+const ticketsPromise = fetchTickets()
 
 function App() {
+  const [inProgress, setInProgress] = useState([])
+  const [resolved, setResolved] = useState([])
 
+  const handleAddToProgress = (ticket) => {
+    if (inProgress.find(t => t.id === ticket.id)) {
+      toast.info('Ticket already in progress')
+      return
+    }
+    setInProgress([...inProgress, ticket])
+    toast.success('Ticket added to In Progress')
+  }
+
+  const handleComplete = (id) => {
+    const ticket = inProgress.find(t => t.id === id)
+    setInProgress(inProgress.filter(t => t.id !== id))
+    setResolved([...resolved, { ...ticket, status: 'Resolved' }])
+    toast.success(`Ticket "${ticket.title}" marked as Resolved`)
+  }
 
   return (
     <>
-    <div className="navbar bg-base-100 shadow-sm">
-  <div className="flex-none">
-    <button className="btn btn-square btn-ghost">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg>
-    </button>
-  </div>
-  <div className="flex-1">
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="flex-none">
-    <button className="btn btn-square btn-ghost">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path> </svg>
-    </button>
-  </div>
-</div>
-    
+      <Navbar />
+      <Banner inProgressCount={inProgress.length} resolvedCount={resolved.length} />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto my-6">
+        <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+          <Tickets ticketsPromise={ticketsPromise} handleAddToProgress={handleAddToProgress} />
+        </Suspense>
+
+        <TaskStatus
+          inProgress={inProgress}
+          handleComplete={handleComplete}
+        />
+      </div>
+
+      <Footer />
+      <ToastContainer position="top-right" autoClose={2000} />
     </>
   )
 }

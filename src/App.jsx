@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // fetch tickets json
 const fetchTickets = async () => {
-  const res = await fetch('/tickets.json')  // src/Tickets.json
+  const res = await fetch('/Tickets.json')  // src/Tickets.json
   if(!res.ok) throw new Error('Failed to fetch tickets')
   return res.json()
 }

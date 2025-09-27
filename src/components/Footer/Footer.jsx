@@ -1,40 +1,11 @@
-import { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Banner from "./components/Banner/Banner";
-import Tickets from "./components/Tickets/Tickets.jsx";
-import TaskStatus from "./components/TaskStatus/TaskStatus";
-import Footer from "./components/Footer/Footer";
-import { fetchTickets } from "./components/Tickets/fetchTickets"; // correct path
+import React from 'react'
 
-const ticketsPromise = fetchTickets();
-
-function App() {
-  const [inProgress, setInProgress] = useState([]);
-  const [resolved, setResolved] = useState([]);
-
+const Footer = () => {
   return (
-    <>
-      <Navbar />
-      <Banner inProgressCount={inProgress.length} resolvedCount={resolved.length} />
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto my-6">
-        <Tickets
-          ticketsPromise={ticketsPromise}
-          inProgress={inProgress}
-          setInProgress={setInProgress}
-        />
-
-        <TaskStatus
-          inProgress={inProgress}
-          setInProgress={setInProgress}
-          resolved={resolved}
-          setResolved={setResolved}
-        />
-      </div>
-
-      <Footer />
-    </>
-  );
+    <footer className="footer footer-center p-4 bg-gray-100 text-gray-700 mt-6">
+      <p>© 2025 Customer Support System. All rights reserved.</p>
+    </footer>
+  )
 }
 
-export default App;
+export default Footer

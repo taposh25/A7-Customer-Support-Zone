@@ -8,9 +8,9 @@ import { Suspense, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// fetch tickets json
+
 const fetchTickets = async () => {
-  const res = await fetch('/Tickets.json')  // src/Tickets.json
+  const res = await fetch('/Tickets.json')  
   if(!res.ok) throw new Error('Failed to fetch tickets')
   return res.json()
 }
@@ -44,7 +44,7 @@ function App() {
       <Navbar />
       <Banner inProgressCount={inProgress.length} resolvedCount={resolved.length} />
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto my-6">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto my-6 ">
         <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
           <Tickets ticketsPromise={ticketsPromise} handleAddToProgress={handleAddToProgress} />
         </Suspense>

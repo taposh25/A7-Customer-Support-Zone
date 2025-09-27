@@ -4,6 +4,8 @@ import TicketCard from '../TicketCard/TicketCard'
 const Tickets = ({ ticketsPromise, handleAddToProgress }) => {
   const [tickets, setTickets] = useState([])
 
+  // console.log(tickets)
+
   useEffect(() => {
     ticketsPromise.then(data => setTickets(data)).catch(err => console.error(err))
   }, [ticketsPromise])

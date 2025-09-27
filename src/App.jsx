@@ -48,6 +48,7 @@ function App() {
         <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
           <Tickets ticketsPromise={ticketsPromise} handleAddToProgress={handleAddToProgress} />
         </Suspense>
+        
 
         <TaskStatus
           inProgress={inProgress}

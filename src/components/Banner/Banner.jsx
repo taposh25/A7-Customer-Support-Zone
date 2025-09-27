@@ -41,13 +41,14 @@
 
 
 import React from 'react'
+import Vector1 from '../../assets/vector1.png'
 
 const Banner = ({ inProgressCount, resolvedCount }) => {
   return (
     <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-6 mt-6">
       
       {/* In Progress */}
-      <div className="h-[250px] p-6 rounded-lg   bg-gradient-to-r from-[#422AD5] to-[#6C63FF] text-white shadow-md flex flex-col justify-center items-center">
+      <div className="h-[250px] p-6 rounded-lg  bg-gradient-to-r from-[#422AD5] to-[#6C63FF] text-white shadow-md flex flex-col justify-center items-center">
         <h2 className="text-lg font-semibold">In Progress</h2>
         <p className="text-2xl font-bold mt-2">{inProgressCount}</p>
       </div>

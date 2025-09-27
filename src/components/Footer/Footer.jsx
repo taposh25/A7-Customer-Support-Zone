@@ -11,7 +11,7 @@ const Footer = () => {
 
     // Details Info section
 
-    <div className='mt-10 max-w-[1200px] mx-auto bg-black '>
+    <div className='mt-10 max-w-[1200px] mx-auto bg-black'>
      <div className='flex justify-between '>
        <div className='pl-5 pt-5'>
         <h1 className='font-bold text-xl text-white pb-3'>CS — Ticket System</h1>
@@ -72,8 +72,10 @@ const Footer = () => {
      
 
 
-     
-      <footer className="footer footer-center p-4  bg-black text-gray-500 mt-15 border-t-1 ">
+     <div className='w-[1150px] mx-auto border-b-2 mt-10'>
+
+     </div>
+      <footer className="footer footer-center p-4  bg-black text-gray-500  ">
       <p>© 2025 Customer Support System. All rights reserved.</p>
     </footer>
     </div>

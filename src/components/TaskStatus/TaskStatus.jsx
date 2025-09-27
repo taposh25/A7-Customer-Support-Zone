@@ -4,6 +4,7 @@ const TaskStatus = ({ inProgress, handleComplete }) => {
   return (
     <div >
       <h3 className="font-semibold text-xl mb-3">Task Status</h3>
+      <p className='text-[12px] text-gray-500'>Select a ticket to add to Task Status</p>
       {inProgress.length === 0 ? (
         <p>No resolved tasks yet.</p>
       ) : (
@@ -16,10 +17,15 @@ const TaskStatus = ({ inProgress, handleComplete }) => {
             >
               Complete
             </button>
+            
           </div>
+          
+           
+          
         ))
       )}
     </div>
+    
   )
 }
 

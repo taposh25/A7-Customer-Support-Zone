@@ -2,7 +2,7 @@ import React from 'react'
 
 const TaskStatus = ({ inProgress, handleComplete }) => {
   return (
-    <div  >
+    <div >
       <h3 className="font-semibold text-xl mb-3">Task Status</h3>
       {inProgress.length === 0 ? (
         <p>No resolved tasks yet.</p>

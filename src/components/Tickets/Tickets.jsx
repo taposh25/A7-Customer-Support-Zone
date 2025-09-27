@@ -9,7 +9,13 @@ const Tickets = ({ ticketsPromise, handleAddToProgress }) => {
   }, [ticketsPromise])
 
   return (
-    <div className="space-y-4">
+
+  <div>
+         <h3 className="font-semibold text-xl mb-3">Customer Tickets</h3>
+
+
+            <div className="grid-cols-2 gap-6 space-y-4">
+      
       {tickets.map(ticket => (
         <TicketCard
           key={ticket.id}
@@ -18,6 +24,9 @@ const Tickets = ({ ticketsPromise, handleAddToProgress }) => {
         />
       ))}
     </div>
+  </div>
+    
+ 
   )
 }
 

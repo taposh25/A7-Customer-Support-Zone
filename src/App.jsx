@@ -37,6 +37,8 @@ function App() {
     toast.success(`Ticket "${ticket.title}" marked as Resolved`)
   }
 
+
+  
   return (
     <>
       <Navbar />

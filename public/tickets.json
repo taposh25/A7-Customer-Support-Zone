@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 1001,
     "title": "Login Issues - Can’t Access Account",
     "description": "Customer is unable to log in to their account after multiple password reset attempts.",
     "customer": "John Smith",
@@ -9,7 +9,7 @@
     "createdAt": "2024-01-15"
   },
   {
-    "id": 2,
+    "id": 1002,
     "title": "Payment Failed - Card Declined",
     "description": "Customer’s Visa card keeps getting declined despite sufficient balance.",
     "customer": "Sarah Johnson",
@@ -18,7 +18,7 @@
     "createdAt": "2024-01-18"
   },
   {
-    "id": 3,
+    "id": 1003,
     "title": "Unable to Download Invoice",
     "description": "Customer cannot download their January invoice from the billing section.",
     "customer": "Michael Brown",
@@ -27,7 +27,7 @@
     "createdAt": "2024-01-17"
   },
   {
-    "id": 4,
+    "id": 1004,
     "title": "Incorrect Billing Address",
     "description": "Customer’s billing address shows an old city despite being updated.",
     "customer": "Emily Davis",
@@ -36,7 +36,7 @@
     "createdAt": "2024-01-18"
   },
   {
-    "id": 5,
+    "id": 1005,
     "title": "App Crash on Launch",
     "description": "Mobile app crashes immediately upon opening on Android 13.",
     "customer": "David Wilson",
@@ -45,7 +45,7 @@
     "createdAt": "2024-01-19"
   },
   {
-    "id": 6,
+    "id": 1006,
     "title": "Refund Not Processed",
     "description": "Customer requested a refund two weeks ago but it hasn’t been processed.",
     "customer": "Sophia Taylor",
@@ -54,7 +54,7 @@
     "createdAt": "2024-01-20"
   },
   {
-    "id": 7,
+    "id": 1007,
     "title": "Two-Factor Authentication Issue",
     "description": "Customer not receiving 2FA codes when logging in from a new device.",
     "customer": "James Anderson",
@@ -63,7 +63,7 @@
     "createdAt": "2024-01-22"
   },
   {
-    "id": 8,
+    "id": 1008,
     "title": "Unable to Update Profile Picture",
     "description": "Customer’s profile picture upload fails with error ‘Upload failed’.",
     "customer": "Olivia Martinez",
@@ -72,7 +72,7 @@
     "createdAt": "2024-01-23"
   },
   {
-    "id": 9,
+    "id": 1009,
     "title": "Subscription Auto-Renewal",
     "description": "Customer wants to disable auto-renewal but option not working in settings.",
     "customer": "Liam Thomas",
@@ -81,7 +81,7 @@
     "createdAt": "2024-01-17"
   },
   {
-    "id": 10,
+    "id": 1010,
     "title": "Missing Order Confirmation Email",
     "description": "Customer didn’t receive confirmation email despite payment success.",
     "customer": "Isabella Garcia",
@@ -90,7 +90,7 @@
     "createdAt": "2024-01-24"
   },
   {
-    "id": 11,
+    "id": 1011,
     "title": "Website Loading Slowly",
     "description": "Customer reports slow load times on dashboard after login.",
     "customer": "Ethan White",
@@ -99,7 +99,7 @@
     "createdAt": "2024-01-25"
   },
   {
-    "id": 12,
+    "id": 1012,
     "title": "Coupon Code Not Working",
     "description": "Customer tried applying discount coupon but system rejected it.",
     "customer": "Mia Robinson",
@@ -108,7 +108,7 @@
     "createdAt": "2024-01-26"
   },
   {
-    "id": 13,
+    "id": 1013,
     "title": "Email Notifications Disabled",
     "description": "Customer no longer receiving notification emails for new updates.",
     "customer": "Benjamin Clark",
@@ -117,7 +117,7 @@
     "createdAt": "2024-01-27"
   },
   {
-    "id": 14,
+    "id": 1014,
     "title": "Mobile App Not Syncing",
     "description": "Customer’s mobile app not syncing data with web dashboard.",
     "customer": "Charlotte Lewis",
@@ -126,7 +126,7 @@
     "createdAt": "2024-01-28"
   },
   {
-    "id": 15,
+    "id": 1015,
     "title": "Password Reset Email Not Received",
     "description": "Customer requested password reset but hasn’t received email.",
     "customer": "Alexander Hall",
